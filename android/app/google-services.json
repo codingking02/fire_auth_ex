@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "313730934674",
+    "project_id": "ecommerce-fire-c09bf",
+    "storage_bucket": "ecommerce-fire-c09bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313730934674:android:806b8075740d712295c34b",
+        "android_client_info": {
+          "package_name": "com.example.fire_auth_ex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313730934674-ku891rm7qul4pnuemc4rs5jiqmch877d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJjsInxPMaiEZ_ygE5X80taCizQED2i-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "313730934674-ku891rm7qul4pnuemc4rs5jiqmch877d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
