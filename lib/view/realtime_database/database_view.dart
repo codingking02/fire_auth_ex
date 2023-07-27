@@ -42,23 +42,38 @@ class RealTimeDataBase extends StatelessWidget {
 
   void createData() {
     FirebaseDatabase firebaseDatabase = FirebaseDatabase.instance;
-    UserModel userModel = UserModel(
+    UserModel userModel1 = UserModel(
         email: "ali@gmail.com",
         jobTitle: "student",
         name: "ali",
         phone: "010....");
-    firebaseDatabase.ref().child("Flutter_team").set(
-          userModel.tomMap(),
+    firebaseDatabase.ref().child("Flutter_tea1").set(
+          userModel1.tomMap(),
+        );
+    UserModel userModel2 = UserModel(
+        email: "zeyad@gmail.com",
+        jobTitle: "student",
+        name: "zeyad",
+        phone: "010....");
+    firebaseDatabase.ref().child("Flutter_team2").set(
+          userModel2.tomMap(),
         );
   }
 
   Future<void> readData() async {
-    FirebaseDatabase firebaseDatabase = FirebaseDatabase.instance;
-
     DatabaseReference databaseReference = FirebaseDatabase.instance.ref();
 
     databaseReference
         .once()
-        .then((value) => print("my data is : ${value.snapshot.value}"));
+        .then(
+          (value) => print(
+            "my data is : ${value.snapshot.value}",
+          ),
+        )
+        .then(
+          (value) => print(
+            "data read  ",
+          ),
+        );
   }
 }
