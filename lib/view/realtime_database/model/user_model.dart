@@ -9,7 +9,7 @@ class UserModel {
     required this.name,
     required this.phone,
   });
-  Map tomMap() {
+  Map<String, dynamic> tomMap() {
     return {
       "name": name,
       "email": email,
