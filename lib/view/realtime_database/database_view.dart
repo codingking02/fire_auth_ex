@@ -23,7 +23,16 @@ class RealTimeDataBase extends StatelessWidget {
               onPressed: () {
                 createData();
               },
-              child: Text('create data'),
+              child: const Text('create data'),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            ElevatedButton(
+              onPressed: () async {
+                await readData();
+              },
+              child: const Text('read data'),
             ),
           ],
         ),
@@ -41,5 +50,15 @@ class RealTimeDataBase extends StatelessWidget {
     firebaseDatabase.ref().child("Flutter_team").set(
           userModel.tomMap(),
         );
+  }
+
+  Future<void> readData() async {
+    FirebaseDatabase firebaseDatabase = FirebaseDatabase.instance;
+
+    DatabaseReference databaseReference = FirebaseDatabase.instance.ref();
+
+    databaseReference
+        .once()
+        .then((value) => print("my data is : ${value.snapshot.value}"));
   }
 }
