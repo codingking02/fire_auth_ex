@@ -3,7 +3,9 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 
 class RealTimeDataBase extends StatelessWidget {
-  const RealTimeDataBase({super.key});
+  DatabaseReference databaseReference = FirebaseDatabase.instance.ref();
+
+  RealTimeDataBase({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,7 @@ class RealTimeDataBase extends StatelessWidget {
         jobTitle: "student",
         name: "ali",
         phone: "010....");
-    firebaseDatabase.ref().child("Flutter_tea1").set(
+    firebaseDatabase.ref().child("Flutter_team1").set(
           userModel1.tomMap(),
         );
     UserModel userModel2 = UserModel(
@@ -61,8 +63,6 @@ class RealTimeDataBase extends StatelessWidget {
   }
 
   Future<void> readData() async {
-    DatabaseReference databaseReference = FirebaseDatabase.instance.ref();
-
     databaseReference
         .once()
         .then(
@@ -76,4 +76,6 @@ class RealTimeDataBase extends StatelessWidget {
           ),
         );
   }
+
+  Future<void> updatedata() async {}
 }
