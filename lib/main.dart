@@ -1,5 +1,6 @@
 // ignore_for_file: unused_import
 
+import 'package:fire_auth_ex/notification/notification.dart';
 import 'package:fire_auth_ex/view/chat_collection/allchat.dart';
 import 'package:fire_auth_ex/view/chat_collection/chat_screen.dart';
 import 'package:fire_auth_ex/view/home.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: RealTimeDataBase(),
+      home: Notify(),
     );
   }
 }

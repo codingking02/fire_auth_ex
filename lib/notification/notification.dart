@@ -1,4 +1,5 @@
 import 'package:fire_auth_ex/notification/notification_badges.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 
 class Notify extends StatefulWidget {
@@ -45,5 +46,9 @@ class _NotifyState extends State<Notify> {
         ),
       ),
     );
+  }
+
+  registernotification() {
+    FirebaseMessaging firebaseMessaging = FirebaseMessaging.instance;
   }
 }
